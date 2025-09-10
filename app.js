@@ -1,7 +1,6 @@
 let amigos = [];
 
 // Comentario somente para testar commit. 
-// testando mais um pouco.
 
 function repeticaoAmigos(x){
 
