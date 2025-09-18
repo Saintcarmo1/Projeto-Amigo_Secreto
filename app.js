@@ -6,8 +6,9 @@ function repeticaoAmigos(x){
 
     for (let i=0; i<amigos.length;i++){
         if (x==amigos[i]){
-            return 1;
+            return true;
          }
+         return false;
     }
 }
 
@@ -17,9 +18,9 @@ function AddAmigos(b){
     let html = "";
 
     let a = repeticaoAmigos(b);
-    if(a==1){
+    if(a==true){
         alert ('Não pode nome repetidos');
-        return 0;
+        return;
     }else{
         amigos.push(b);
         for (let i=0; i<amigos.length;i++){
@@ -49,7 +50,7 @@ function adicionarAmigo(){
 
 function sortearAmigo(){
     let B = amigos.length;
-    let a = parseInt(Math.random()*B);
+    let a = Math.floor(Math.random()*B);
 
     if(B==0){
         alert ('Sem amigos encontrados.Recoloque os amigos caso tenha sorteado recentemente');
